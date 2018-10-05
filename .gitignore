@@ -1,0 +1,4 @@
+.env
+victorbot.toml
+results/
+victorbot.yml
