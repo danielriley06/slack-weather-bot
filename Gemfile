@@ -8,11 +8,14 @@ gem 'rest-client'
 gem 'sinatra'
 gem 'slack-ruby-bot'
 gem 'puma'
+gem 'forecast_io'
+gem 'awesome_print'
 
 group :development, :test do
   gem 'foreman'
   gem 'pry'
   gem 'rake'
+  gem 'byebug'
 end
 
 group :test do

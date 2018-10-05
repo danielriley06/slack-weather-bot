@@ -8,6 +8,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    awesome_print (1.8.0)
+    byebug (10.0.2)
     celluloid (0.17.3)
       celluloid-essentials
       celluloid-extras
@@ -41,6 +43,10 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
       faraday (>= 0.7.4, < 1.0)
+    forecast_io (2.0.2)
+      faraday
+      hashie
+      multi_json
     foreman (0.85.0)
       thor (~> 0.19.1)
     gli (2.18.0)
@@ -56,6 +62,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
     minitest (5.11.3)
+    multi_json (1.13.1)
     multipart-post (2.0.0)
     mustermann (1.0.3)
     netrc (0.11.0)
@@ -127,8 +134,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
+  byebug
   celluloid-io
   dotenv
+  forecast_io
   foreman
   pry
   puma

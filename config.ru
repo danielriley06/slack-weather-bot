@@ -4,6 +4,7 @@ require 'puma'
 require 'dotenv/load'
 require 'slack_weatherbot'
 require 'web'
+require 'forecast_io'
 
 Thread.abort_on_exception = true
 
