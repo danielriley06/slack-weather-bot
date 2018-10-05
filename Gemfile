@@ -9,6 +9,7 @@ gem 'sinatra'
 gem 'slack-ruby-bot'
 gem 'puma'
 gem 'forecast_io'
+gem 'geocoder'
 gem 'awesome_print'
 
 group :development, :test do

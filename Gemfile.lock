@@ -49,6 +49,7 @@ GEM
       multi_json
     foreman (0.85.0)
       thor (~> 0.19.1)
+    geocoder (1.5.0)
     gli (2.18.0)
     hashdiff (0.3.7)
     hashie (3.6.0)
@@ -140,6 +141,7 @@ DEPENDENCIES
   dotenv
   forecast_io
   foreman
+  geocoder
   pry
   puma
   rack-test
