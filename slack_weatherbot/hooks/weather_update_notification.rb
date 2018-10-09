@@ -10,20 +10,16 @@ module SlackWeatherbot
       private
 
       def schedule_weather_notifications
-        SlackWeatherbot.scheduler.in('3s', tag: 'Daily Weather Notification Job') do
+        SlackWeatherbot.scheduler.cron '00 09 * * *' do
           send_weather_notifications_on_change
         end
-        ap Bot.joined_channel_id_array
-        # scheduler.cron '00 09 * * *' do
-        #   check_weather_changes
-        # end
       end
 
       def send_weather_notifications_on_change
         current_weather_data = SlackWeatherbot::Utils::Forecast.new.call
-        if check_weather_changes(current_weather_data: current_weather_data)
-          send_weather_notifications(current_weather_data: current_weather_data)
-        end
+        return unless check_weather_changes(current_weather_data: current_weather_data)
+
+        send_weather_notifications(current_weather_data: current_weather_data)
       end
 
       def check_weather_changes(current_weather_data:)
