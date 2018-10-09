@@ -11,6 +11,7 @@ gem 'puma'
 gem 'forecast_io'
 gem 'geocoder'
 gem 'awesome_print'
+gem 'rufus-scheduler'
 
 group :development, :test do
   gem 'foreman'

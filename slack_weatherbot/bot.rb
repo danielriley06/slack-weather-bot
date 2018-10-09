@@ -1,5 +1,13 @@
 module SlackWeatherbot
   class Bot < SlackRubyBot::Bot
+    def self.slack_client
+      @slack_client ||= ::Slack::Web::Client.new(token: ENV['SLACK_API_TOKEN'])
+    end
+
+    def self.joined_channel_id_array
+      slack_client.channels_list.channels.map!(&:id).to_a
+    end
+
     help do
       title 'SlackWeatherbot'
       desc 'Interface with Darksky from Slack'
